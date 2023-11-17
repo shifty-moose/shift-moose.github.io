@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raccoons of Berlin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="https://static.thenounproject.com/png/2505432-200.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:ital,wght@1,300&family=Titan+One&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+    <script type="module">
+
+        import { springyEmojiCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+        import { emojiCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+        
+        let styleSheet = document.createElement("style");
+        let clickCount = 0;
+
+
+        document.getElementById("binImg").addEventListener("click", freeRaccoon, {once: true});
+        document.getElementById("raccoonRemoval").addEventListener("click", raccoonRemovalFunc, {once: true});
+
+        function freeRaccoon() {
+            styleSheet.innerHTML = `* {cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='100' height='120' viewport='0 0 100 100' style='fill:black;font-size:60px;'><text y='50%'>🦝</text></svg>") 0 40,auto; /*!emojicursor.app*/}`;
+            document.body.appendChild(styleSheet);
+            document.getElementById("raccoonGame").innerHTML= "😄 He likes you and decided to stick around! 😄 <br><br> Click the bin again to feed him!";
+            document.getElementById("bin").innerHTML = `<img src="binopen.png" alt="bin" id="binImg">`;
+            document.getElementById("binImg").addEventListener("click", freeRaccoonTwo);
+            clickCount++;
+            return;
+        };  
+
+        function freeRaccoonTwo() {
+            if (clickCount === 1) {
+                new springyEmojiCursor({emoji: ["🦝"] });
+                document.getElementById("raccoonGame").innerHTML= "🚨 Uh oh! You summoned his friends! 🚨<br><br> Now they'll follow you around the website!";
+            };
+        };
+
+
+        function raccoonRemovalFunc() {
+            document.getElementById("raccoonRemoval").innerHTML = "ERROR 404: Raccoon Removal Unavailable <br><br> More Raccoons have been dispatched to your location";
+            new emojiCursor({emoji: ["🦝"] });
+            emojiCursor.destroy();
+        };
+       
+    
+
+
+      </script>        
+      </head>
+<body>
+        <header>
+        <h1>Raccoons of Berlin</h1>
+        <a href="#theSidebar"><img src="raccoon-wild-animal-cut-out-vector-43031093.jpg" alt="racconHeader"></a>
+    </header>
+<div class="raccoonHero">
+    <a href="#linkContainer"><h2 class="heroText">Discover the European Raccoon Capital!</h2></a>
+</div>
+
+<div id="raccoonGame">
+    <p>😩 OH NO! There's a Raccoon stuck in the Trash! 😩 <br><br>
+        Click the trash can to let him out!</p>
+</div>
+<div id="bin">
+
+    <img src="binpic.png" alt="bin" id="binImg">
+</div>
+    <article id="linkContainer" class="pageContainer">
+
+        <div class="postsContainer">
+
+            <div class="blogPostContainer" id="blogOne">
+                <h2>Thirsty Raccoons Are Breaking Into Homes in Germany, and Specifically Stealing Beer 🍺</h2>
+                <div class="postContent">
+                    <div class="postText">
+                        <p>Raccoons are not native to Germany, but in less than 100 years, the number of the little masked mammals in the country has grown to several hundred thousand. Some Germans refer to them as waschbären — washing bears — because of their habit of dunking their food before they eat it, while other Germans just call them straight-up annoyances. Especially when beer is involved.
+                            <br> <br>
+                            Vacationers and locals alike are getting home and discovering that raccoons have raided their kitchens, causing thousands of dollars worth of damage in the process, including killing household pets and stealing any beer they can find. On less frustrating occasions, the raccoons have been seen at city parks, knocking over discarded beer bottles so they could drink whatever booze was left inside. “Raccoons are funny and clever … and they like beer,” Berthold Langenhorst of the German Nature Conservation Association (NABU), said.  
+                        </p>
+                    </div>
+                    <img src="Funny_Racoon.jpg" alt="raccoon in bin">
+                </div>
+            </div>
+
+            <div class="blogPostContainer" id="blogTwo">
+                <h2>Berlin's Nighttime Opera: The Enchanting Raccoon Symphony 🎻</h2>
+                <div class="postContent">
+                    <div class="postText">
+                        <p>As the sun dips below the horizon, casting a warm glow across Berlin's iconic skyline, a unique and enchanting symphony unfolds – the nightly serenade of raccoons. 
+                            These clever creatures have emerged as the unofficial conductors of Berlin's nocturnal orchestra, their chittering and rustling echoing through the city streets. 
+                            From scaling apartment balconies with acrobatic finesse to foraging along the banks of the Spree River, 
+                            raccoons have seamlessly woven themselves into the fabric of Berlin's vibrant nightlife, creating a captivating tale of urban wildlife.
+                            <br> <br>
+                            The raccoon's nighttime antics have become a source of both fascination and amusement for Berlin's residents. 
+                            Each nocturnal escapade contributes to the city's dynamic character, 
+                            turning the night into a canvas where these masked performers paint an unforgettable portrait of wildlife in the heart of Berlin.
+                            </p>
+                    </div>
+                    <img src="sweetraccoon.jpeg" alt="raccoon in bin">
+                </div>
+            </div>
+
+            <div class="blogPostContainer" id="blogThree">
+                <h2>Raccoon Tales: Endearing Encounters and Shared Stories in Berlin 📖</h2>
+                <div class="postContent">
+                    <div class="postText">
+                        <p>In the tapestry of Berlin's urban life, raccoons have etched themselves into the collective consciousness of its residents, 
+                            leaving behind a trail of endearing and sometimes comical encounters. 
+                            From daring balcony break-ins that leave residents both frustrated and amused to curious raccoon stares through apartment windows, 
+                            these masked critters have become the unsung protagonists of Berlin's everyday stories.
+                        <br><br>
+                            As tales of raccoon antics circulate through the city, a unique bond forms between human and animal inhabitants. 
+                            Berliners find themselves sharing not just the physical space of their city but also the stories of unexpected and whimsical interactions with these furry neighbors. 
+                            In this convergence of urban and wild, Berlin stands as a testament to the harmonious coexistence between the diverse inhabitants that call this city home.
+                        </p>
+                    </div>
+                    <img src="raccoon-problems.jpg" alt="raccoon in bin">
+
+            </div>
+            </div> 
+        
+        </div>
+
+
+        <div id="theSidebar" class="sidebarDiv">
+            <div class="sideBarOne">
+            <a href="https://en.wikipedia.org/wiki/Raccoon"><h5>Raccoon Wikipedia</h5></a>
+            <a href="https://hauptsache-waschbaer.de/"><h5>Berlin Raccoon Sightings</h5></a>
+            <a href="https://www.treehugger.com/raccoon-facts-5073585"><h5>Racoon Facts</h5></a>
+            <a href="https://tips.fbi.gov/home"><h5>Report a Raccoon</h5></a>
+            </div>
+
+            <div class="sideBarTwo">
+            <h4>Recent Raccoon News</h4>
+            <ul>
+            <li><a href="#blogOne">Drunk Raccoons causing Chaos</a></li><br>
+            <li><a href="#blogTwo">The Singing Raccoons</a></li><br>
+            <li><a href="#blogThree">Risque Raccoon Rendevouz</a></li><br>
+            </ul>
+            </div>
+
+            <input id="searchBar" type="text" placeholder="Search..">
+        </div>
+
+    </article>
+
+    <footer>
+        <h3 id="raccoonRemoval">Click here for an Express Raccoon Removal Service ™️</h3>
+    </footer>
+</body>
+</html> 
